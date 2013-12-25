@@ -77,7 +77,8 @@
 		943B10D7186B762C00417E4D = {
 			isa = PBXGroup;
 			children = (
-				943B10E9186B762C00417E4D /* Festool */,
+				94620992186B78E300CE7009 /* Festool */,
+				943B10E9186B762C00417E4D /* Example */,
 				943B1102186B762C00417E4D /* FestoolTests */,
 				943B10E2186B762C00417E4D /* Frameworks */,
 				943B10E1186B762C00417E4D /* Products */,
@@ -104,7 +105,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		943B10E9186B762C00417E4D /* Festool */ = {
+		943B10E9186B762C00417E4D /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				943B10F2186B762C00417E4D /* USAppDelegate.h */,
@@ -112,7 +113,7 @@
 				943B10F5186B762C00417E4D /* Images.xcassets */,
 				943B10EA186B762C00417E4D /* Supporting Files */,
 			);
-			path = Festool;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		943B10EA186B762C00417E4D /* Supporting Files */ = {
@@ -144,12 +145,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		94620992186B78E300CE7009 /* Festool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Festool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		943B10DF186B762C00417E4D /* Festool */ = {
+		943B10DF186B762C00417E4D /* FestoolExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 943B110C186B762C00417E4D /* Build configuration list for PBXNativeTarget "Festool" */;
+			buildConfigurationList = 943B110C186B762C00417E4D /* Build configuration list for PBXNativeTarget "FestoolExample" */;
 			buildPhases = (
 				943B10DC186B762C00417E4D /* Sources */,
 				943B10DD186B762C00417E4D /* Frameworks */,
@@ -159,7 +167,7 @@
 			);
 			dependencies = (
 			);
-			name = Festool;
+			name = FestoolExample;
 			productName = Festool;
 			productReference = 943B10E0186B762C00417E4D /* Festool.app */;
 			productType = "com.apple.product-type.application";
@@ -209,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				943B10DF186B762C00417E4D /* Festool */,
+				943B10DF186B762C00417E4D /* FestoolExample */,
 				943B10FA186B762C00417E4D /* FestoolTests */,
 			);
 		};
@@ -258,7 +266,7 @@
 /* Begin PBXTargetDependency section */
 		943B1101186B762C00417E4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 943B10DF186B762C00417E4D /* Festool */;
+			target = 943B10DF186B762C00417E4D /* FestoolExample */;
 			targetProxy = 943B1100186B762C00417E4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -363,8 +371,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Festool/Festool-Prefix.pch";
-				INFOPLIST_FILE = "Festool/Festool-Info.plist";
+				GCC_PREFIX_HEADER = "Example/Festool-Prefix.pch";
+				INFOPLIST_FILE = "Example/Festool-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -376,8 +384,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Festool/Festool-Prefix.pch";
-				INFOPLIST_FILE = "Festool/Festool-Info.plist";
+				GCC_PREFIX_HEADER = "Example/Festool-Prefix.pch";
+				INFOPLIST_FILE = "Example/Festool-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,13 +445,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		943B110C186B762C00417E4D /* Build configuration list for PBXNativeTarget "Festool" */ = {
+		943B110C186B762C00417E4D /* Build configuration list for PBXNativeTarget "FestoolExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				943B110D186B762C00417E4D /* Debug */,
 				943B110E186B762C00417E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		943B110F186B762C00417E4D /* Build configuration list for PBXNativeTarget "FestoolTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +461,7 @@
 				943B1111186B762C00417E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
