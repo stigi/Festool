@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <Specta/Specta.h>
+
 
 @interface FestoolTests : XCTestCase
 
