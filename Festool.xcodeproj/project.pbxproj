@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		943B10E4186B762C00417E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E3186B762C00417E4D /* Foundation.framework */; };
+		943B10E6186B762C00417E4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E5186B762C00417E4D /* CoreGraphics.framework */; };
+		943B10E8186B762C00417E4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E7186B762C00417E4D /* UIKit.framework */; };
+		943B10EE186B762C00417E4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 943B10EC186B762C00417E4D /* InfoPlist.strings */; };
+		943B10F0186B762C00417E4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 943B10EF186B762C00417E4D /* main.m */; };
+		943B10F4186B762C00417E4D /* USAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 943B10F3186B762C00417E4D /* USAppDelegate.m */; };
+		943B10F6186B762C00417E4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943B10F5186B762C00417E4D /* Images.xcassets */; };
+		943B10FD186B762C00417E4D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10FC186B762C00417E4D /* XCTest.framework */; };
+		943B10FE186B762C00417E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E3186B762C00417E4D /* Foundation.framework */; };
+		943B10FF186B762C00417E4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E7186B762C00417E4D /* UIKit.framework */; };
+		943B1107186B762C00417E4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 943B1105186B762C00417E4D /* InfoPlist.strings */; };
+		943B1109186B762C00417E4D /* FestoolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 943B1108186B762C00417E4D /* FestoolTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		943B1100186B762C00417E4D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 943B10D8186B762C00417E4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 943B10DF186B762C00417E4D;
+			remoteInfo = Festool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		943B10E0186B762C00417E4D /* Festool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Festool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		943B10E3186B762C00417E4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		943B10E5186B762C00417E4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		943B10E7186B762C00417E4D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		943B10EB186B762C00417E4D /* Festool-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Festool-Info.plist"; sourceTree = "<group>"; };
+		943B10ED186B762C00417E4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		943B10EF186B762C00417E4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		943B10F1186B762C00417E4D /* Festool-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Festool-Prefix.pch"; sourceTree = "<group>"; };
+		943B10F2186B762C00417E4D /* USAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USAppDelegate.h; sourceTree = "<group>"; };
+		943B10F3186B762C00417E4D /* USAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USAppDelegate.m; sourceTree = "<group>"; };
+		943B10F5186B762C00417E4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		943B10FB186B762C00417E4D /* FestoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		943B10FC186B762C00417E4D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		943B1104186B762C00417E4D /* FestoolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FestoolTests-Info.plist"; sourceTree = "<group>"; };
+		943B1106186B762C00417E4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		943B1108186B762C00417E4D /* FestoolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FestoolTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		943B10DD186B762C00417E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943B10E6186B762C00417E4D /* CoreGraphics.framework in Frameworks */,
+				943B10E8186B762C00417E4D /* UIKit.framework in Frameworks */,
+				943B10E4186B762C00417E4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		943B10F8186B762C00417E4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943B10FD186B762C00417E4D /* XCTest.framework in Frameworks */,
+				943B10FF186B762C00417E4D /* UIKit.framework in Frameworks */,
+				943B10FE186B762C00417E4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		943B10D7186B762C00417E4D = {
+			isa = PBXGroup;
+			children = (
+				943B10E9186B762C00417E4D /* Festool */,
+				943B1102186B762C00417E4D /* FestoolTests */,
+				943B10E2186B762C00417E4D /* Frameworks */,
+				943B10E1186B762C00417E4D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		943B10E1186B762C00417E4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				943B10E0186B762C00417E4D /* Festool.app */,
+				943B10FB186B762C00417E4D /* FestoolTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		943B10E2186B762C00417E4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				943B10E3186B762C00417E4D /* Foundation.framework */,
+				943B10E5186B762C00417E4D /* CoreGraphics.framework */,
+				943B10E7186B762C00417E4D /* UIKit.framework */,
+				943B10FC186B762C00417E4D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		943B10E9186B762C00417E4D /* Festool */ = {
+			isa = PBXGroup;
+			children = (
+				943B10F2186B762C00417E4D /* USAppDelegate.h */,
+				943B10F3186B762C00417E4D /* USAppDelegate.m */,
+				943B10F5186B762C00417E4D /* Images.xcassets */,
+				943B10EA186B762C00417E4D /* Supporting Files */,
+			);
+			path = Festool;
+			sourceTree = "<group>";
+		};
+		943B10EA186B762C00417E4D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				943B10EB186B762C00417E4D /* Festool-Info.plist */,
+				943B10EC186B762C00417E4D /* InfoPlist.strings */,
+				943B10EF186B762C00417E4D /* main.m */,
+				943B10F1186B762C00417E4D /* Festool-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		943B1102186B762C00417E4D /* FestoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				943B1108186B762C00417E4D /* FestoolTests.m */,
+				943B1103186B762C00417E4D /* Supporting Files */,
+			);
+			path = FestoolTests;
+			sourceTree = "<group>";
+		};
+		943B1103186B762C00417E4D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				943B1104186B762C00417E4D /* FestoolTests-Info.plist */,
+				943B1105186B762C00417E4D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		943B10DF186B762C00417E4D /* Festool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 943B110C186B762C00417E4D /* Build configuration list for PBXNativeTarget "Festool" */;
+			buildPhases = (
+				943B10DC186B762C00417E4D /* Sources */,
+				943B10DD186B762C00417E4D /* Frameworks */,
+				943B10DE186B762C00417E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Festool;
+			productName = Festool;
+			productReference = 943B10E0186B762C00417E4D /* Festool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		943B10FA186B762C00417E4D /* FestoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 943B110F186B762C00417E4D /* Build configuration list for PBXNativeTarget "FestoolTests" */;
+			buildPhases = (
+				943B10F7186B762C00417E4D /* Sources */,
+				943B10F8186B762C00417E4D /* Frameworks */,
+				943B10F9186B762C00417E4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				943B1101186B762C00417E4D /* PBXTargetDependency */,
+			);
+			name = FestoolTests;
+			productName = FestoolTests;
+			productReference = 943B10FB186B762C00417E4D /* FestoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		943B10D8186B762C00417E4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = US;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ullrich Schäfer";
+				TargetAttributes = {
+					943B10FA186B762C00417E4D = {
+						TestTargetID = 943B10DF186B762C00417E4D;
+					};
+				};
+			};
+			buildConfigurationList = 943B10DB186B762C00417E4D /* Build configuration list for PBXProject "Festool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 943B10D7186B762C00417E4D;
+			productRefGroup = 943B10E1186B762C00417E4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				943B10DF186B762C00417E4D /* Festool */,
+				943B10FA186B762C00417E4D /* FestoolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		943B10DE186B762C00417E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943B10EE186B762C00417E4D /* InfoPlist.strings in Resources */,
+				943B10F6186B762C00417E4D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		943B10F9186B762C00417E4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943B1107186B762C00417E4D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		943B10DC186B762C00417E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943B10F4186B762C00417E4D /* USAppDelegate.m in Sources */,
+				943B10F0186B762C00417E4D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		943B10F7186B762C00417E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943B1109186B762C00417E4D /* FestoolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		943B1101186B762C00417E4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 943B10DF186B762C00417E4D /* Festool */;
+			targetProxy = 943B1100186B762C00417E4D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		943B10EC186B762C00417E4D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				943B10ED186B762C00417E4D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		943B1105186B762C00417E4D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				943B1106186B762C00417E4D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		943B110A186B762C00417E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		943B110B186B762C00417E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		943B110D186B762C00417E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Festool/Festool-Prefix.pch";
+				INFOPLIST_FILE = "Festool/Festool-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		943B110E186B762C00417E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Festool/Festool-Prefix.pch";
+				INFOPLIST_FILE = "Festool/Festool-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		943B1110186B762C00417E4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Festool.app/Festool";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Festool/Festool-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FestoolTests/FestoolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		943B1111186B762C00417E4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Festool.app/Festool";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Festool/Festool-Prefix.pch";
+				INFOPLIST_FILE = "FestoolTests/FestoolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		943B10DB186B762C00417E4D /* Build configuration list for PBXProject "Festool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943B110A186B762C00417E4D /* Debug */,
+				943B110B186B762C00417E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		943B110C186B762C00417E4D /* Build configuration list for PBXNativeTarget "Festool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943B110D186B762C00417E4D /* Debug */,
+				943B110E186B762C00417E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		943B110F186B762C00417E4D /* Build configuration list for PBXNativeTarget "FestoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943B1110186B762C00417E4D /* Debug */,
+				943B1111186B762C00417E4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 943B10D8186B762C00417E4D /* Project object */;
+}
