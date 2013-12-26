@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "NSString+USRouter.h"
+
 
 @interface USRouter : NSObject
 
