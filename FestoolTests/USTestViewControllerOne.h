@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Ullrich Schäfer. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "USTestViewController.h"
 
-@interface USTestViewControllerOne : UIViewController
+@interface USTestViewControllerOne : USTestViewController
 
 @end

@@ -28,6 +28,7 @@
 		94A2DA27186C3A94009937D7 /* USTestViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA26186C3A94009937D7 /* USTestViewControllerOne.m */; };
 		94A2DA2A186C3AA1009937D7 /* USTestViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA29186C3AA1009937D7 /* USTestViewControllerTwo.m */; };
 		94A2DA2D186C3B34009937D7 /* USTestViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA2C186C3B34009937D7 /* USTestViewControllerThree.m */; };
+		94A2DA31186C41DF009937D7 /* USTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA30186C41DF009937D7 /* USTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,9 @@
 		94A2DA29186C3AA1009937D7 /* USTestViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewControllerTwo.m; sourceTree = "<group>"; };
 		94A2DA2B186C3B34009937D7 /* USTestViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTestViewControllerThree.h; sourceTree = "<group>"; };
 		94A2DA2C186C3B34009937D7 /* USTestViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewControllerThree.m; sourceTree = "<group>"; };
+		94A2DA2E186C40D5009937D7 /* USRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USRouterViewController.h; sourceTree = "<group>"; };
+		94A2DA2F186C41DF009937D7 /* USTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTestViewController.h; sourceTree = "<group>"; };
+		94A2DA30186C41DF009937D7 /* USTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewController.m; sourceTree = "<group>"; };
 		F39CAB1E16E6487CA4B5CE44 /* libPods-FestoolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FestoolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -185,6 +189,7 @@
 				94620997186B7D8B00CE7009 /* USRouter.m */,
 				94A2DA1F186B96F5009937D7 /* USRoute.h */,
 				94A2DA20186B96F5009937D7 /* USRoute.m */,
+				94A2DA2E186C40D5009937D7 /* USRouterViewController.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -194,6 +199,8 @@
 			children = (
 				94A2DA1E186B8AC7009937D7 /* FestoolTestCase.h */,
 				94A2DA1C186B8AB2009937D7 /* FestoolTestCase.m */,
+				94A2DA2F186C41DF009937D7 /* USTestViewController.h */,
+				94A2DA30186C41DF009937D7 /* USTestViewController.m */,
 				94A2DA25186C3A94009937D7 /* USTestViewControllerOne.h */,
 				94A2DA26186C3A94009937D7 /* USTestViewControllerOne.m */,
 				94A2DA28186C3AA1009937D7 /* USTestViewControllerTwo.h */,
@@ -346,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A2DA31186C41DF009937D7 /* USTestViewController.m in Sources */,
 				94A2DA23186B9726009937D7 /* FestoolRouteTests.m in Sources */,
 				94A2DA2D186C3B34009937D7 /* USTestViewControllerThree.m in Sources */,
 				94A2DA2A186C3AA1009937D7 /* USTestViewControllerTwo.m in Sources */,

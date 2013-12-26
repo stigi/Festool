@@ -9,6 +9,7 @@
 #import "USRouter.h"
 
 #import "USRoute.h"
+#import "USRouterViewController.h"
 
 
 @interface USRouter () <UINavigationControllerDelegate>
@@ -72,12 +73,20 @@
                                              }];
         
         // TODO: Should we turn these asserts into warnings?
-        NSAssert1(routes.count >= 1, @"There was more than one route found matching the path %@", path);
+        NSAssert1(routes.count <= 1, @"There was more than one route found matching the path %@", path);
         NSAssert1(routes.count > 0, @"There was no route found matching the path %@", path);
         
         USRoute *route = [routes anyObject];
         if (route) {
-            [self.navigationController pushViewController:[[route.viewControllerClass alloc] init] animated:YES];
+            Class viewControllerClass = route.viewControllerClass;
+            UIViewController *viewController = nil;
+            if ([viewControllerClass instancesRespondToSelector:@selector(initWithRouterParameters:)]) {
+                NSDictionary *parameters = [route parameterValuesByParsingPath:path];
+                viewController = [[viewControllerClass alloc] initWithRouterParameters:parameters];
+            } else {
+                viewController = [[viewControllerClass alloc] initWithNibName:nil bundle:nil];
+            }
+            [self.navigationController pushViewController:viewController animated:YES];
         }
     }
 }

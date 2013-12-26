@@ -86,5 +86,19 @@
 }
 
 
+#pragma mark - Parameters
+
+- (void)testComplexOpenWithParameters
+{
+    [self.router map:@"/complex/:param1/:param2" toController:[USTestViewControllerOne class]];
+    
+    [self.router open:@"/complex/1/5"];
+
+    expect([self.router.navigationController.topViewController isKindOfClass:[USTestViewControllerOne class]]);
+    NSDictionary *parameters = [(USTestViewControllerOne *)self.router.navigationController.topViewController parameters];
+    
+    expect(parameters[@"param1"]).to.equal(@"1");
+    expect(parameters[@"param2"]).to.equal(@"5");
+}
 
 @end
