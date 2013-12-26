@@ -101,6 +101,30 @@
     expect(parameters[@"param2"]).to.equal(@"5");
 }
 
+- (void)testComplexParametersWithDashesAndSpaces
+{
+    NSString *value = @"Hey, I got spaces and /dashes";
+    [self.router map:@"/complex/:param" toController:[USExampleViewControllerOne class]];
+    
+    
+    NSString *encoded = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                                  (__bridge CFStringRef)(value),
+                                                                                  NULL,
+                                                                                  CFSTR(":/?#[]@!$&'()*+,;="),
+                                                                                  kCFStringEncodingUTF8));
+    [self.router open:[NSString stringWithFormat:@"/complex/%@", encoded]];
+    
+    expect([self.router.navigationController.topViewController isKindOfClass:[USExampleViewControllerOne class]]);
+    
+    NSDictionary *parameters = [(USExampleViewControllerOne *)self.router.navigationController.topViewController parameters];
+    
+    NSString *decoded = CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+                                                                                                  (__bridge CFStringRef)(parameters[@"param"]),
+                                                                                                  CFSTR(""),
+                                                                                                  kCFStringEncodingUTF8));
+    expect(decoded).to.equal(value);
+}
+
 
 #pragma mark - Poping
 

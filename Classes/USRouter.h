@@ -19,6 +19,7 @@
  */
 + (instancetype)sharedRouter;
 
+
 /**
  A router is responsible for a navigation controller. It manages pushing and poping content
  
@@ -28,14 +29,29 @@
 
 
 /**
- Opens a view controller associated with the given path
+ Opens a view controller associated with the given path.
+ 
+ \discussion A path can either be as simple as "/simple" or complex with parameters
+ as "/complex/parameter1/foo/parameter2". \see `-map:toController:`.
+ 
+ You need to pay attention to correctly URL-encode your values when using them as parameters
+ 
+ \param path A path simple, or complex
  */
 - (void)open:(NSString *)path;
 
-- (void)pop;
 
 /**
- Creates a mapping between a path and a controller class
+ Pops the current top view controller or dismisses a modaly presented controller
+ */
+- (void)pop;
+
+
+/**
+ Creates a mapping between a path and a controller class.
+ 
+ \discussion A path can either be as simple as "/simple" or ccomplex with parameters
+ as "/complex/:param/foo/:param2"
  */
 - (void)map:(NSString *)path toController:(Class)viewControllerSubclass;
 
