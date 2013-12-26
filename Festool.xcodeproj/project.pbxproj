@@ -10,6 +10,21 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>1C7FE23266E74649BE11B96D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>25F15BF30C0C4B5D83D581FE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -24,6 +39,36 @@
 			<string>Pods/Pods-FestoolTests.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2E977EE2212545A48542CDAC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>4B42D04D867D40F59E19F0ED</key>
 		<dict>
@@ -56,6 +101,19 @@
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
+		<key>6930128F6A3E476D8BC67154</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>943B10D7186B762C00417E4D</key>
 		<dict>
 			<key>children</key>
@@ -66,6 +124,7 @@
 				<string>943B10E2186B762C00417E4D</string>
 				<string>943B10E1186B762C00417E4D</string>
 				<string>25F15BF30C0C4B5D83D581FE</string>
+				<string>1C7FE23266E74649BE11B96D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -143,6 +202,8 @@
 			<array>
 				<string>943B10F4186B762C00417E4D</string>
 				<string>943B10F0186B762C00417E4D</string>
+				<string>94620998186B7D8B00CE7009</string>
+				<string>94A2DA21186B96F5009937D7</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -158,6 +219,7 @@
 				<string>943B10E6186B762C00417E4D</string>
 				<string>943B10E8186B762C00417E4D</string>
 				<string>943B10E4186B762C00417E4D</string>
+				<string>D260514C507C4C52B6419323</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -184,9 +246,11 @@
 			<string>943B110C186B762C00417E4D</string>
 			<key>buildPhases</key>
 			<array>
+				<string>2E977EE2212545A48542CDAC</string>
 				<string>943B10DC186B762C00417E4D</string>
 				<string>943B10DD186B762C00417E4D</string>
 				<string>943B10DE186B762C00417E4D</string>
+				<string>A5E2DEE252894047A9D0B479</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -212,7 +276,7 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>path</key>
-			<string>Festool.app</string>
+			<string>FestoolExample.app</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
@@ -239,6 +303,7 @@
 				<string>943B10E7186B762C00417E4D</string>
 				<string>943B10FC186B762C00417E4D</string>
 				<string>F39CAB1E16E6487CA4B5CE44</string>
+				<string>6930128F6A3E476D8BC67154</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -465,6 +530,9 @@
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
+				<string>94A2DA23186B9726009937D7</string>
+				<string>94A2DA1D186B8AB2009937D7</string>
+				<string>94A2DA1B186B8A6B009937D7</string>
 				<string>943B1109186B762C00417E4D</string>
 			</array>
 			<key>isa</key>
@@ -603,7 +671,11 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>94A2DA1E186B8AC7009937D7</string>
+				<string>94A2DA1C186B8AB2009937D7</string>
 				<string>943B1108186B762C00417E4D</string>
+				<string>94A2DA1A186B8A6B009937D7</string>
+				<string>94A2DA22186B9726009937D7</string>
 				<string>943B1103186B762C00417E4D</string>
 			</array>
 			<key>isa</key>
@@ -846,6 +918,8 @@
 		</dict>
 		<key>943B110D186B762C00417E4D</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1C7FE23266E74649BE11B96D</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -870,6 +944,8 @@
 		</dict>
 		<key>943B110E186B762C00417E4D</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1C7FE23266E74649BE11B96D</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -915,7 +991,7 @@
 				<key>ARCHS</key>
 				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
 				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Festool.app/Festool</string>
+				<string>$(BUILT_PRODUCTS_DIR)/FestoolExample.app/FestoolExample</string>
 				<key>FRAMEWORK_SEARCH_PATHS</key>
 				<array>
 					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
@@ -925,7 +1001,7 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Festool/Festool-Prefix.pch</string>
+				<string>Example/Festool-Prefix.pch</string>
 				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
 				<array>
 					<string>DEBUG=1</string>
@@ -954,7 +1030,7 @@
 				<key>ARCHS</key>
 				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
 				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Festool.app/Festool</string>
+				<string>$(BUILT_PRODUCTS_DIR)/FestoolExample.app/FestoolExample</string>
 				<key>FRAMEWORK_SEARCH_PATHS</key>
 				<array>
 					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
@@ -964,7 +1040,7 @@
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Festool/Festool-Prefix.pch</string>
+				<string>Example/Festool-Prefix.pch</string>
 				<key>INFOPLIST_FILE</key>
 				<string>FestoolTests/FestoolTests-Info.plist</string>
 				<key>PRODUCT_NAME</key>
@@ -982,13 +1058,155 @@
 		<key>94620992186B78E300CE7009</key>
 		<dict>
 			<key>children</key>
-			<array/>
+			<array>
+				<string>94620996186B7D8B00CE7009</string>
+				<string>94620997186B7D8B00CE7009</string>
+				<string>94A2DA1F186B96F5009937D7</string>
+				<string>94A2DA20186B96F5009937D7</string>
+			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>path</key>
-			<string>Festool</string>
+			<string>Classes</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94620996186B7D8B00CE7009</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>USRouter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94620997186B7D8B00CE7009</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>USRouter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94620998186B7D8B00CE7009</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94620997186B7D8B00CE7009</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94A2DA1A186B8A6B009937D7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FestoolNavigationTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94A2DA1B186B8A6B009937D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94A2DA1A186B8A6B009937D7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94A2DA1C186B8AB2009937D7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FestoolTestCase.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94A2DA1D186B8AB2009937D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94A2DA1C186B8AB2009937D7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94A2DA1E186B8AC7009937D7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FestoolTestCase.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94A2DA1F186B96F5009937D7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>USRoute.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94A2DA20186B96F5009937D7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>USRoute.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94A2DA21186B96F5009937D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94A2DA20186B96F5009937D7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>94A2DA22186B9726009937D7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FestoolRouteTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94A2DA23186B9726009937D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>94A2DA22186B9726009937D7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>9CA43B0678F34E85B1DA4F16</key>
 		<dict>
@@ -1019,6 +1237,37 @@ fi
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>A5E2DEE252894047A9D0B479</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D260514C507C4C52B6419323</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6930128F6A3E476D8BC67154</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>F39CAB1E16E6487CA4B5CE44</key>
 		<dict>

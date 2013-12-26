@@ -6,31 +6,54 @@
 //  Copyright (c) 2013 Ullrich Schäfer. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <Specta/Specta.h>
+#import "FestoolTestCase.h"
+
+#import "USRouter.h"
 
 
-@interface FestoolTests : XCTestCase
+
+@interface FestoolTests : FestoolTestCase
 
 @end
 
+
 @implementation FestoolTests
 
-- (void)setUp
+#pragma mark - Creation
+
+- (void)testRouterCreation
 {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    USRouter *router = [[USRouter alloc] init];
+    expect(router).toNot.beNil();
 }
 
-- (void)tearDown
+- (void)testRouterSingletonCreation
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+    USRouter *router = [USRouter sharedRouter];
+    expect(router).toNot.beNil();
 }
 
-- (void)testExample
+- (void)testRouterIsCreatedWithNavigationController
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    USRouter *router = [[USRouter alloc] init];
+    expect(router.navigationController).toNot.beNil();
 }
+
+- (void)testSingletonIsActuallyASingleton
+{
+    USRouter *singleton = [USRouter sharedRouter];
+    USRouter *sameSingleton = [USRouter sharedRouter];
+    
+    expect(sameSingleton).to.beIdenticalTo(singleton);
+}
+
+- (void)testSingletonWorksAlsoForNavigationController
+{
+    UINavigationController *navigationController = [[USRouter sharedRouter] navigationController];
+    UINavigationController *sameNavigationController = [[USRouter sharedRouter] navigationController];
+    
+    expect(sameNavigationController).to.beIdenticalTo(navigationController);
+}
+
 
 @end
