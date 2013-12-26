@@ -40,49 +40,49 @@
 
 - (void)testSimpleOpen
 {
-    [self.router map:@"/simple" toController:[USTestViewControllerOne class]];
-
+    [self.router map:@"/simple" toController:[USExampleViewControllerOne class]];
+    
     [self.router open:@"/simple"];
-
-    expect(self.router.navigationController.topViewController).to.beKindOf([USTestViewControllerOne class]);
+    
+    expect(self.router.navigationController.topViewController).to.beKindOf([USExampleViewControllerOne class]);
 }
 
 - (void)testPickingOfCorrectPath
 {
-    [self.router map:@"/simple/one" toController:[USTestViewControllerOne class]];
-    [self.router map:@"/simple/two" toController:[USTestViewControllerTwo class]];
-    [self.router map:@"/simple/three" toController:[USTestViewControllerThree class]];
+    [self.router map:@"/simple/one" toController:[USExampleViewControllerOne class]];
+    [self.router map:@"/simple/two" toController:[USExampleViewControllerTwo class]];
+    [self.router map:@"/simple/three" toController:[USExampleViewControllerThree class]];
     
     [self.router open:@"/simple/two"];
     
-    expect(self.router.navigationController.topViewController).to.beKindOf([USTestViewControllerTwo class]);
+    expect(self.router.navigationController.topViewController).to.beKindOf([USExampleViewControllerTwo class]);
 }
 
 - (void)testComplexOpen
 {
-    [self.router map:@"/complex/one/:id" toController:[USTestViewControllerOne class]];
-    [self.router map:@"/complex/two/:id" toController:[USTestViewControllerTwo class]];
-    [self.router map:@"/complex/three/:id" toController:[USTestViewControllerThree class]];
+    [self.router map:@"/complex/one/:id" toController:[USExampleViewControllerOne class]];
+    [self.router map:@"/complex/two/:id" toController:[USExampleViewControllerTwo class]];
+    [self.router map:@"/complex/three/:id" toController:[USExampleViewControllerThree class]];
     
     [self.router open:@"/complex/two/1"];
     
-    expect(self.router.navigationController.topViewController).to.beKindOf([USTestViewControllerTwo class]);
+    expect(self.router.navigationController.topViewController).to.beKindOf([USExampleViewControllerTwo class]);
 }
 
 - (void)testMultipleOpen
 {
-    [self.router map:@"/complex/one/:id" toController:[USTestViewControllerOne class]];
-    [self.router map:@"/complex/two/:id" toController:[USTestViewControllerTwo class]];
-    [self.router map:@"/complex/three/:id" toController:[USTestViewControllerThree class]];
+    [self.router map:@"/complex/one/:id" toController:[USExampleViewControllerOne class]];
+    [self.router map:@"/complex/two/:id" toController:[USExampleViewControllerTwo class]];
+    [self.router map:@"/complex/three/:id" toController:[USExampleViewControllerThree class]];
     
     [self.router open:@"/complex/one/1"];
     [self.router open:@"/complex/two/2"];
     [self.router open:@"/complex/three/3"];
     
     expect(self.router.navigationController.viewControllers).to.haveCountOf(3);
-    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USTestViewControllerOne class]);
-    expect(self.router.navigationController.viewControllers[1]).to.beKindOf([USTestViewControllerTwo class]);
-    expect(self.router.navigationController.viewControllers[2]).to.beKindOf([USTestViewControllerThree class]);
+    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USExampleViewControllerOne class]);
+    expect(self.router.navigationController.viewControllers[1]).to.beKindOf([USExampleViewControllerTwo class]);
+    expect(self.router.navigationController.viewControllers[2]).to.beKindOf([USExampleViewControllerThree class]);
 }
 
 
@@ -90,12 +90,12 @@
 
 - (void)testComplexOpenWithParameters
 {
-    [self.router map:@"/complex/:param1/:param2" toController:[USTestViewControllerOne class]];
+    [self.router map:@"/complex/:param1/:param2" toController:[USExampleViewControllerOne class]];
     
     [self.router open:@"/complex/1/5"];
-
-    expect([self.router.navigationController.topViewController isKindOfClass:[USTestViewControllerOne class]]);
-    NSDictionary *parameters = [(USTestViewControllerOne *)self.router.navigationController.topViewController parameters];
+    
+    expect([self.router.navigationController.topViewController isKindOfClass:[USExampleViewControllerOne class]]);
+    NSDictionary *parameters = [(USExampleViewControllerOne *)self.router.navigationController.topViewController parameters];
     
     expect(parameters[@"param1"]).to.equal(@"1");
     expect(parameters[@"param2"]).to.equal(@"5");
@@ -106,20 +106,20 @@
 
 - (void)testPop
 {
-    [self.router map:@"/complex/one/:id" toController:[USTestViewControllerOne class]];
-    [self.router map:@"/complex/two/:id" toController:[USTestViewControllerTwo class]];
+    [self.router map:@"/complex/one/:id" toController:[USExampleViewControllerOne class]];
+    [self.router map:@"/complex/two/:id" toController:[USExampleViewControllerTwo class]];
     
     [self.router open:@"/complex/one/1"];
     [self.router open:@"/complex/two/2"];
     
     expect(self.router.navigationController.viewControllers).to.haveCountOf(2);
-    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USTestViewControllerOne class]);
-    expect(self.router.navigationController.viewControllers[1]).to.beKindOf([USTestViewControllerTwo class]);
+    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USExampleViewControllerOne class]);
+    expect(self.router.navigationController.viewControllers[1]).to.beKindOf([USExampleViewControllerTwo class]);
     
     [self.router pop];
     
     expect(self.router.navigationController.viewControllers).to.haveCountOf(1);
-    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USTestViewControllerOne class]);
+    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USExampleViewControllerOne class]);
     
 }
 

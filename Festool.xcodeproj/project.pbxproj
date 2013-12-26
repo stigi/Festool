@@ -25,10 +25,10 @@
 		94A2DA1D186B8AB2009937D7 /* FestoolTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA1C186B8AB2009937D7 /* FestoolTestCase.m */; };
 		94A2DA21186B96F5009937D7 /* USRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA20186B96F5009937D7 /* USRoute.m */; };
 		94A2DA23186B9726009937D7 /* FestoolRouteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA22186B9726009937D7 /* FestoolRouteTests.m */; };
-		94A2DA27186C3A94009937D7 /* USTestViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA26186C3A94009937D7 /* USTestViewControllerOne.m */; };
-		94A2DA2A186C3AA1009937D7 /* USTestViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA29186C3AA1009937D7 /* USTestViewControllerTwo.m */; };
-		94A2DA2D186C3B34009937D7 /* USTestViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA2C186C3B34009937D7 /* USTestViewControllerThree.m */; };
-		94A2DA31186C41DF009937D7 /* USTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA30186C41DF009937D7 /* USTestViewController.m */; };
+		94A2DA3E186C458F009937D7 /* USExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA37186C458F009937D7 /* USExampleViewController.m */; };
+		94A2DA3F186C458F009937D7 /* USExampleViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA39186C458F009937D7 /* USExampleViewControllerOne.m */; };
+		94A2DA40186C458F009937D7 /* USExampleViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA3B186C458F009937D7 /* USExampleViewControllerThree.m */; };
+		94A2DA41186C458F009937D7 /* USExampleViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2DA3D186C458F009937D7 /* USExampleViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,15 +68,15 @@
 		94A2DA1F186B96F5009937D7 /* USRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USRoute.h; sourceTree = "<group>"; };
 		94A2DA20186B96F5009937D7 /* USRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USRoute.m; sourceTree = "<group>"; };
 		94A2DA22186B9726009937D7 /* FestoolRouteTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FestoolRouteTests.m; sourceTree = "<group>"; };
-		94A2DA25186C3A94009937D7 /* USTestViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTestViewControllerOne.h; sourceTree = "<group>"; };
-		94A2DA26186C3A94009937D7 /* USTestViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewControllerOne.m; sourceTree = "<group>"; };
-		94A2DA28186C3AA1009937D7 /* USTestViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTestViewControllerTwo.h; sourceTree = "<group>"; };
-		94A2DA29186C3AA1009937D7 /* USTestViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewControllerTwo.m; sourceTree = "<group>"; };
-		94A2DA2B186C3B34009937D7 /* USTestViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTestViewControllerThree.h; sourceTree = "<group>"; };
-		94A2DA2C186C3B34009937D7 /* USTestViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewControllerThree.m; sourceTree = "<group>"; };
 		94A2DA2E186C40D5009937D7 /* USRouterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USRouterViewController.h; sourceTree = "<group>"; };
-		94A2DA2F186C41DF009937D7 /* USTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTestViewController.h; sourceTree = "<group>"; };
-		94A2DA30186C41DF009937D7 /* USTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTestViewController.m; sourceTree = "<group>"; };
+		94A2DA36186C458F009937D7 /* USExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USExampleViewController.h; sourceTree = "<group>"; };
+		94A2DA37186C458F009937D7 /* USExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USExampleViewController.m; sourceTree = "<group>"; };
+		94A2DA38186C458F009937D7 /* USExampleViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USExampleViewControllerOne.h; sourceTree = "<group>"; };
+		94A2DA39186C458F009937D7 /* USExampleViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USExampleViewControllerOne.m; sourceTree = "<group>"; };
+		94A2DA3A186C458F009937D7 /* USExampleViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USExampleViewControllerThree.h; sourceTree = "<group>"; };
+		94A2DA3B186C458F009937D7 /* USExampleViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USExampleViewControllerThree.m; sourceTree = "<group>"; };
+		94A2DA3C186C458F009937D7 /* USExampleViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USExampleViewControllerTwo.h; sourceTree = "<group>"; };
+		94A2DA3D186C458F009937D7 /* USExampleViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USExampleViewControllerTwo.m; sourceTree = "<group>"; };
 		F39CAB1E16E6487CA4B5CE44 /* libPods-FestoolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FestoolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +144,14 @@
 			children = (
 				943B10F2186B762C00417E4D /* USAppDelegate.h */,
 				943B10F3186B762C00417E4D /* USAppDelegate.m */,
+				94A2DA36186C458F009937D7 /* USExampleViewController.h */,
+				94A2DA37186C458F009937D7 /* USExampleViewController.m */,
+				94A2DA38186C458F009937D7 /* USExampleViewControllerOne.h */,
+				94A2DA39186C458F009937D7 /* USExampleViewControllerOne.m */,
+				94A2DA3C186C458F009937D7 /* USExampleViewControllerTwo.h */,
+				94A2DA3D186C458F009937D7 /* USExampleViewControllerTwo.m */,
+				94A2DA3A186C458F009937D7 /* USExampleViewControllerThree.h */,
+				94A2DA3B186C458F009937D7 /* USExampleViewControllerThree.m */,
 				943B10F5186B762C00417E4D /* Images.xcassets */,
 				943B10EA186B762C00417E4D /* Supporting Files */,
 			);
@@ -199,14 +207,6 @@
 			children = (
 				94A2DA1E186B8AC7009937D7 /* FestoolTestCase.h */,
 				94A2DA1C186B8AB2009937D7 /* FestoolTestCase.m */,
-				94A2DA2F186C41DF009937D7 /* USTestViewController.h */,
-				94A2DA30186C41DF009937D7 /* USTestViewController.m */,
-				94A2DA25186C3A94009937D7 /* USTestViewControllerOne.h */,
-				94A2DA26186C3A94009937D7 /* USTestViewControllerOne.m */,
-				94A2DA28186C3AA1009937D7 /* USTestViewControllerTwo.h */,
-				94A2DA29186C3AA1009937D7 /* USTestViewControllerTwo.m */,
-				94A2DA2B186C3B34009937D7 /* USTestViewControllerThree.h */,
-				94A2DA2C186C3B34009937D7 /* USTestViewControllerThree.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -343,7 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				943B10F4186B762C00417E4D /* USAppDelegate.m in Sources */,
+				94A2DA40186C458F009937D7 /* USExampleViewControllerThree.m in Sources */,
+				94A2DA3F186C458F009937D7 /* USExampleViewControllerOne.m in Sources */,
 				943B10F0186B762C00417E4D /* main.m in Sources */,
+				94A2DA3E186C458F009937D7 /* USExampleViewController.m in Sources */,
+				94A2DA41186C458F009937D7 /* USExampleViewControllerTwo.m in Sources */,
 				94620998186B7D8B00CE7009 /* USRouter.m in Sources */,
 				94A2DA21186B96F5009937D7 /* USRoute.m in Sources */,
 			);
@@ -353,12 +357,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A2DA31186C41DF009937D7 /* USTestViewController.m in Sources */,
 				94A2DA23186B9726009937D7 /* FestoolRouteTests.m in Sources */,
-				94A2DA2D186C3B34009937D7 /* USTestViewControllerThree.m in Sources */,
-				94A2DA2A186C3AA1009937D7 /* USTestViewControllerTwo.m in Sources */,
 				94A2DA1D186B8AB2009937D7 /* FestoolTestCase.m in Sources */,
-				94A2DA27186C3A94009937D7 /* USTestViewControllerOne.m in Sources */,
 				94A2DA1B186B8A6B009937D7 /* FestoolNavigationTests.m in Sources */,
 				943B1109186B762C00417E4D /* FestoolTests.m in Sources */,
 			);

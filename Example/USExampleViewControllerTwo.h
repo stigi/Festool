@@ -1,13 +1,13 @@
 //
-//  USTestViewControllerTwo.h
+//  USExampleViewControllerTwo.h
 //  Festool
 //
 //  Created by Ullrich Schäfer on 26/12/13.
 //  Copyright (c) 2013 Ullrich Schäfer. All rights reserved.
 //
 
-#import "USTestViewController.h"
+#import "USExampleViewController.h"
 
-@interface USTestViewControllerTwo : USTestViewController
+@interface USExampleViewControllerTwo : USExampleViewController
 
 @end

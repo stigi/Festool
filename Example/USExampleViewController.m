@@ -1,18 +1,18 @@
 //
-//  USTestViewController.m
+//  USExampleViewController.m
 //  Festool
 //
 //  Created by Ullrich Schäfer on 26/12/13.
 //  Copyright (c) 2013 Ullrich Schäfer. All rights reserved.
 //
 
-#import "USTestViewController.h"
+#import "USExampleViewController.h"
 
-@interface USTestViewController ()
+@interface USExampleViewController ()
 
 @end
 
-@implementation USTestViewController
+@implementation USExampleViewController
 
 - (instancetype)initWithRouterParameters:(NSDictionary *)parameters;
 {

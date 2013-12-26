@@ -1,5 +1,5 @@
 //
-//  USTestViewController.h
+//  USExampleViewController.h
 //  Festool
 //
 //  Created by Ullrich Schäfer on 26/12/13.
@@ -10,7 +10,7 @@
 
 #import "USRouterViewController.h"
 
-@interface USTestViewController : UIViewController <USRouterViewController>
+@interface USExampleViewController : UIViewController <USRouterViewController>
 
 @property NSDictionary *parameters;
 
