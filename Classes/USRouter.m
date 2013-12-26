@@ -59,7 +59,7 @@
 }
 
 
-#pragma mark - Open
+#pragma mark - Open and Close
 
 - (void)open:(NSString *)path;
 {
@@ -89,6 +89,11 @@
             [self.navigationController pushViewController:viewController animated:YES];
         }
     }
+}
+
+- (void)pop;
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

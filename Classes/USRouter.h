@@ -32,6 +32,7 @@
  */
 - (void)open:(NSString *)path;
 
+- (void)pop;
 
 /**
  Creates a mapping between a path and a controller class

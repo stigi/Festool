@@ -101,4 +101,26 @@
     expect(parameters[@"param2"]).to.equal(@"5");
 }
 
+
+#pragma mark - Poping
+
+- (void)testPop
+{
+    [self.router map:@"/complex/one/:id" toController:[USTestViewControllerOne class]];
+    [self.router map:@"/complex/two/:id" toController:[USTestViewControllerTwo class]];
+    
+    [self.router open:@"/complex/one/1"];
+    [self.router open:@"/complex/two/2"];
+    
+    expect(self.router.navigationController.viewControllers).to.haveCountOf(2);
+    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USTestViewControllerOne class]);
+    expect(self.router.navigationController.viewControllers[1]).to.beKindOf([USTestViewControllerTwo class]);
+    
+    [self.router pop];
+    
+    expect(self.router.navigationController.viewControllers).to.haveCountOf(1);
+    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USTestViewControllerOne class]);
+    
+}
+
 @end
