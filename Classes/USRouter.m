@@ -63,8 +63,22 @@
 - (void)open:(NSString *)path;
 {
     @synchronized(self.routes) {
-        USRoute *route = [self.routes objectForKey:path];
-        [self.navigationController pushViewController:[[route.viewControllerClass alloc] init] animated:YES];
+        NSMutableSet *routes = [NSMutableSet set];
+        [self.routes enumerateKeysAndObjectsWithOptions:NSEnumerationConcurrent
+                                             usingBlock:^(NSString *routePath, USRoute *route, BOOL *stop) {
+                                                 if ([route matchesPath:path]) {
+                                                     [routes addObject:route];
+                                                 }
+                                             }];
+        
+        // TODO: Should we turn these asserts into warnings?
+        NSAssert1(routes.count >= 1, @"There was more than one route found matching the path %@", path);
+        NSAssert1(routes.count > 0, @"There was no route found matching the path %@", path);
+        
+        USRoute *route = [routes anyObject];
+        if (route) {
+            [self.navigationController pushViewController:[[route.viewControllerClass alloc] init] animated:YES];
+        }
     }
 }
 

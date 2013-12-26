@@ -24,7 +24,7 @@
  
  \returns YES when this route can be applied to path
  */
-//- (BOOL)matchesPath:(NSString *)path;
+- (BOOL)matchesPath:(NSString *)path;
 
 
 /**

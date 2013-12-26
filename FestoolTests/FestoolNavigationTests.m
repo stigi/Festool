@@ -40,11 +40,51 @@
 
 - (void)testSimpleOpen
 {
-    [self.router map:@"/simple" toController:[UIViewController class]];
+    [self.router map:@"/simple" toController:[USTestViewControllerOne class]];
 
     [self.router open:@"/simple"];
 
-    expect(self.router.navigationController.topViewController).to.beKindOf([UIViewController class]);
+    expect(self.router.navigationController.topViewController).to.beKindOf([USTestViewControllerOne class]);
 }
+
+- (void)testPickingOfCorrectPath
+{
+    [self.router map:@"/simple/one" toController:[USTestViewControllerOne class]];
+    [self.router map:@"/simple/two" toController:[USTestViewControllerTwo class]];
+    [self.router map:@"/simple/three" toController:[USTestViewControllerThree class]];
+    
+    [self.router open:@"/simple/two"];
+    
+    expect(self.router.navigationController.topViewController).to.beKindOf([USTestViewControllerTwo class]);
+}
+
+- (void)testComplexOpen
+{
+    [self.router map:@"/complex/one/:id" toController:[USTestViewControllerOne class]];
+    [self.router map:@"/complex/two/:id" toController:[USTestViewControllerTwo class]];
+    [self.router map:@"/complex/three/:id" toController:[USTestViewControllerThree class]];
+    
+    [self.router open:@"/complex/two/1"];
+    
+    expect(self.router.navigationController.topViewController).to.beKindOf([USTestViewControllerTwo class]);
+}
+
+- (void)testMultipleOpen
+{
+    [self.router map:@"/complex/one/:id" toController:[USTestViewControllerOne class]];
+    [self.router map:@"/complex/two/:id" toController:[USTestViewControllerTwo class]];
+    [self.router map:@"/complex/three/:id" toController:[USTestViewControllerThree class]];
+    
+    [self.router open:@"/complex/one/1"];
+    [self.router open:@"/complex/two/2"];
+    [self.router open:@"/complex/three/3"];
+    
+    expect(self.router.navigationController.viewControllers).to.haveCountOf(3);
+    expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USTestViewControllerOne class]);
+    expect(self.router.navigationController.viewControllers[1]).to.beKindOf([USTestViewControllerTwo class]);
+    expect(self.router.navigationController.viewControllers[2]).to.beKindOf([USTestViewControllerThree class]);
+}
+
+
 
 @end

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Ullrich Schäfer. All rights reserved.
 //
 
+#import <libkern/OSAtomic.h>
+
 #import "USRoute.h"
 
 
@@ -32,6 +34,28 @@
 
 #pragma mark - Parsing Options
 
+- (BOOL)matchesPath:(NSString *)path
+{
+    NSArray *parameterComponents = [self.parameterPath componentsSeparatedByString:@"/"];
+    NSArray *pathComponents = [path componentsSeparatedByString:@"/"];
+
+    if (pathComponents.count != parameterComponents.count) return NO;
+    
+    __block volatile uint32_t /*BOOL*/ matches = YES;
+    [parameterComponents enumerateObjectsWithOptions:NSEnumerationConcurrent
+                                          usingBlock:^(NSString *parameterSegment, NSUInteger idx, BOOL *stop)
+     {
+         NSString *pathSegment = [pathComponents objectAtIndex:idx];
+         
+         if ([parameterSegment hasPrefix:@":"] == NO) {
+             BOOL segmentIsEqual = [pathSegment isEqualToString:parameterSegment];
+             // thread safe version of matches &= segmentIsEqual
+             *stop = !OSAtomicAnd32(segmentIsEqual, &matches);
+         }
+     }];
+    return matches;
+}
+
 - (NSDictionary *)parameterValuesByParsingPath:(NSString *)path;
 {
     NSArray *parameterComponents = [self.parameterPath componentsSeparatedByString:@"/"];
@@ -46,18 +70,20 @@
     // NSDictionary *parameterToValue = [NSDictionary dictionaryWithObjects:pathComponents forKeys:parameterComponents];
     // parameterValues = [parameterToValue map:...];
     // but instead let's just do it like this
-    [parameterComponents enumerateObjectsUsingBlock:^(NSString *parameterSegment, NSUInteger idx, BOOL *stop) {
-        NSString *pathSegment = [pathComponents objectAtIndex:idx];
-        
-        if ([parameterSegment hasPrefix:@":"]) {
-            @synchronized(parameterValues) {
-                [parameterValues setValue:pathSegment forKey:[parameterSegment substringFromIndex:1]];
-            }
-        } else {
-            NSAssert2([pathSegment isEqualToString:parameterSegment],
-                      @"Path (%@) does not fit this routes parameter path (%@).", path, self.parameterPath);
-        }
-    }];
+    [parameterComponents enumerateObjectsWithOptions:NSEnumerationConcurrent
+                                          usingBlock:^(NSString *parameterSegment, NSUInteger idx, BOOL *stop)
+     {
+         NSString *pathSegment = [pathComponents objectAtIndex:idx];
+         
+         if ([parameterSegment hasPrefix:@":"]) {
+             @synchronized(parameterValues) {
+                 [parameterValues setValue:pathSegment forKey:[parameterSegment substringFromIndex:1]];
+             }
+         } else {
+             NSAssert2([pathSegment isEqualToString:parameterSegment],
+                       @"Path (%@) does not fit this routes parameter path (%@).", path, self.parameterPath);
+         }
+     }];
     
     return [parameterValues copy];
 }

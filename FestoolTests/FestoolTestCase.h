@@ -16,6 +16,10 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
+#import "USTestViewControllerOne.h"
+#import "USTestViewControllerTwo.h"
+#import "USTestViewControllerThree.h"
+
 @interface FestoolTestCase : XCTestCase
 
 @end

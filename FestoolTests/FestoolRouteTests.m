@@ -91,16 +91,40 @@
 
 - (void)testParsingOfOptions
 {
-    NSString *path = @"/users/3/tracks/4";
-    NSString *routePath = @"/users/:id/tracks/:track-id";
+    NSString *path = @"/users/3/tracks/4/users/3/tracks/4/users/3/tracks/4/users/3/tracks/4";
+    NSString *routePath = @"/users/:id/tracks/:track-id/users/:id1/tracks/:track-id1/users/:id2/tracks/:track-id2/users/:id3/tracks/:track-id3";
     
     USRoute *route = [[USRoute alloc] initWithParameterPath:routePath viewControllerClass:[UIViewController class]];
 
     NSDictionary *options = [route parameterValuesByParsingPath:path];
 
-    expect(options).to.haveCountOf(2);
+    expect(options).to.haveCountOf(8);
     expect(options[@"id"]).to.equal(@"3");
     expect(options[@"track-id"]).to.equal(@"4");
+}
+
+- (void)testMatchingOfPathSuccessfull
+{
+    NSString *path = @"/users/3/tracks/4";
+    NSString *routePath = @"/users/:id/tracks/:track-id";
+    
+    USRoute *route = [[USRoute alloc] initWithParameterPath:routePath viewControllerClass:[UIViewController class]];
+    
+    BOOL matches = [route matchesPath:path];
+    
+    expect(matches).to.beTruthy();
+}
+
+- (void)testMatchingOfPathUnsuccessfull
+{
+    NSString *path = @"/users/3/lists/4";
+    NSString *routePath = @"/users/:id/tracks/:track-id";
+    
+    USRoute *route = [[USRoute alloc] initWithParameterPath:routePath viewControllerClass:[UIViewController class]];
+    
+    BOOL matches = [route matchesPath:path];
+    
+    expect(matches).to.beFalsy();
 }
 
 
