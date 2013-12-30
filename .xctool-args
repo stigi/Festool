@@ -1,0 +1,5 @@
+[
+  "-workspace", "Festool.xcworkspace",
+  "-scheme", "Festool Example",
+  "-sdk", "iphonesimulator"
+]
