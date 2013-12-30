@@ -1,0 +1,5 @@
+language: objective-c
+xcode_workspace: Festool.xcworkspace
+xcode_scheme: Festool Example
+xcode_sdk: iphonesimulator
+rvm: 1.9.3
