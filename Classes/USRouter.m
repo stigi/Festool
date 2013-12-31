@@ -10,10 +10,12 @@
 
 #import "USRoute.h"
 #import "USRouterViewController.h"
+#import "USRouterViewControllerAnimatedTransitioning.h"
 
 
 @interface USRouter () <UINavigationControllerDelegate>
 @property (readonly) NSMutableDictionary *routes;
+@property USRoute *currentRoute;
 @end
 
 
@@ -49,10 +51,19 @@
 
 - (void)map:(NSString *)path toController:(Class)viewControllerSubclass;
 {
+    [self map:path toController:viewControllerSubclass withTansitionings:nil];
+}
+
+- (void)       map:(NSString *)path
+      toController:(Class)viewControllerSubclass
+ withTansitionings:(NSArray *)transitionings;
+{
     NSParameterAssert([viewControllerSubclass isSubclassOfClass:[UIViewController class]]);
     
     @synchronized(self.routes) {
-        USRoute *route = [[USRoute alloc] initWithParameterPath:path viewControllerClass:viewControllerSubclass];
+        USRoute *route = [[USRoute alloc] initWithParameterPath:path
+                                            viewControllerClass:viewControllerSubclass
+                                         animatedTransitionings:transitionings];
         
         [self.routes setObject:route forKey:path];
     }
@@ -86,6 +97,8 @@
             } else {
                 viewController = [[viewControllerClass alloc] initWithNibName:nil bundle:nil];
             }
+            
+            self.currentRoute = route;
             [self.navigationController pushViewController:viewController animated:YES];
         }
     }
@@ -96,5 +109,31 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - UINavigationControllerDelegate
+
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0);
+{
+    __block id<USRouterViewControllerAnimatedTransitioning> transitioning = nil;
+    [self.currentRoute.animatedTransitionings enumerateObjectsWithOptions:NSEnumerationConcurrent
+                                                               usingBlock:
+     ^(id<USRouterViewControllerAnimatedTransitioning> aTransitioning, NSUInteger idx, BOOL *stop) {
+         if ([aTransitioning us_canHandleAnimatedTransitioningFromViewController:fromVC
+                                                                    toController:toVC
+                                                                       operation:operation])
+         {
+             transitioning = aTransitioning;
+             *stop = YES;
+         }
+     }];
+    return transitioning;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated;
+{
+    self.currentRoute = nil;
+}
 
 @end

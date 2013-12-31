@@ -10,11 +10,24 @@
 #import <UIKit/UIKit.h>
 
 @interface USRoute : NSObject
+
 @property (readonly, strong) Class viewControllerClass;
 @property (readonly, copy) NSString *parameterPath;
 
+/**
+ Holds the array of iOS7 UIViewControllerAnimatedTransitioning objects that can be used to animate the transition.
+ 
+ The objects need to subclasses of the USRouterViewControllerAnimatedTransitioning protocol.
+ */
+@property (readonly, copy) NSArray/*USRouterViewControllerAnimatedTransitioning*/*animatedTransitionings;
+
+
 - (instancetype)initWithParameterPath:(NSString *)path
                   viewControllerClass:(Class)viewControllerClass;
+
+- (instancetype)initWithParameterPath:(NSString *)path
+                  viewControllerClass:(Class)viewControllerClass
+               animatedTransitionings:(NSArray/*USRouterViewControllerAnimatedTransitioning*/*)animatedTransitionings;
 
 
 - (NSDictionary *)parameterValuesByParsingPath:(NSString *)path;

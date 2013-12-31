@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B42D04D867D40F59E19F0ED /* libPods-FestoolTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F39CAB1E16E6487CA4B5CE44 /* libPods-FestoolTests.a */; };
+		940FE4B91871EC0900F18347 /* USExampleTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 940FE4B81871EC0900F18347 /* USExampleTransitioning.m */; };
+		940FE4BC18720C2A00F18347 /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 940FE4BB18720C2A00F18347 /* XCTestCase+AsyncTesting.m */; };
 		943B10E4186B762C00417E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E3186B762C00417E4D /* Foundation.framework */; };
 		943B10E6186B762C00417E4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E5186B762C00417E4D /* CoreGraphics.framework */; };
 		943B10E8186B762C00417E4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943B10E7186B762C00417E4D /* UIKit.framework */; };
@@ -46,6 +48,11 @@
 /* Begin PBXFileReference section */
 		25F15BF30C0C4B5D83D581FE /* Pods-FestoolTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FestoolTests.xcconfig"; path = "Pods/Pods-FestoolTests.xcconfig"; sourceTree = "<group>"; };
 		6930128F6A3E476D8BC67154 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		940FE4B61871E6D600F18347 /* USRouterViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USRouterViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		940FE4B71871EC0900F18347 /* USExampleTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USExampleTransitioning.h; sourceTree = "<group>"; };
+		940FE4B81871EC0900F18347 /* USExampleTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USExampleTransitioning.m; sourceTree = "<group>"; };
+		940FE4BA18720C2A00F18347 /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
+		940FE4BB18720C2A00F18347 /* XCTestCase+AsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+AsyncTesting.m"; sourceTree = "<group>"; };
 		943B10E0186B762C00417E4D /* FestoolExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FestoolExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943B10E3186B762C00417E4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		943B10E5186B762C00417E4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,6 +164,8 @@
 				94A2DA3D186C458F009937D7 /* USExampleViewControllerTwo.m */,
 				94A2DA3A186C458F009937D7 /* USExampleViewControllerThree.h */,
 				94A2DA3B186C458F009937D7 /* USExampleViewControllerThree.m */,
+				940FE4B71871EC0900F18347 /* USExampleTransitioning.h */,
+				940FE4B81871EC0900F18347 /* USExampleTransitioning.m */,
 				943B10F5186B762C00417E4D /* Images.xcassets */,
 				943B10EA186B762C00417E4D /* Supporting Files */,
 			);
@@ -206,6 +215,7 @@
 				94A2DA2E186C40D5009937D7 /* USRouterViewController.h */,
 				94A2DA43186C4DFE009937D7 /* NSString+USRouter.h */,
 				94A2DA44186C4DFE009937D7 /* NSString+USRouter.m */,
+				940FE4B61871E6D600F18347 /* USRouterViewControllerAnimatedTransitioning.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -213,6 +223,8 @@
 		94A2DA24186C3A77009937D7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				940FE4BA18720C2A00F18347 /* XCTestCase+AsyncTesting.h */,
+				940FE4BB18720C2A00F18347 /* XCTestCase+AsyncTesting.m */,
 				94A2DA1E186B8AC7009937D7 /* FestoolTestCase.h */,
 				94A2DA1C186B8AB2009937D7 /* FestoolTestCase.m */,
 			);
@@ -350,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940FE4B91871EC0900F18347 /* USExampleTransitioning.m in Sources */,
 				943B10F4186B762C00417E4D /* USAppDelegate.m in Sources */,
 				94A2DA40186C458F009937D7 /* USExampleViewControllerThree.m in Sources */,
 				94A2DA3F186C458F009937D7 /* USExampleViewControllerOne.m in Sources */,
@@ -370,6 +383,7 @@
 				94A2DA1D186B8AB2009937D7 /* FestoolTestCase.m in Sources */,
 				94A2DA47186C4EB1009937D7 /* FestoolNSStringTests.m in Sources */,
 				94A2DA1B186B8A6B009937D7 /* FestoolNavigationTests.m in Sources */,
+				940FE4BC18720C2A00F18347 /* XCTestCase+AsyncTesting.m in Sources */,
 				943B1109186B762C00417E4D /* FestoolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

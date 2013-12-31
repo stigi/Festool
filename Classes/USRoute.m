@@ -18,6 +18,13 @@
 - (instancetype)initWithParameterPath:(NSString *)path
                   viewControllerClass:(Class)viewControllerClass;
 {
+    return [self initWithParameterPath:path viewControllerClass:viewControllerClass animatedTransitionings:nil];
+}
+
+- (instancetype)initWithParameterPath:(NSString *)path
+                  viewControllerClass:(Class)viewControllerClass
+               animatedTransitionings:(NSArray/*USRouterViewControllerAnimatedTransitioning*/*)animatedTransitionings;
+{
     NSParameterAssert([viewControllerClass isSubclassOfClass:[UIViewController class]]);
     NSParameterAssert(path.length > 0);
     
@@ -27,6 +34,7 @@
         _viewControllerClass = viewControllerClass;
         
         _parameters = [[self class] parametersFromPath:_parameterPath];
+        _animatedTransitionings = [animatedTransitionings copy];
     }
     return self;
 }
