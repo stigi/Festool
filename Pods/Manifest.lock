@@ -6,7 +6,12 @@ PODS:
 
 DEPENDENCIES:
   - Expecta (~> 0.2.3)
-  - OCMockito (~> 1.1.0)
+  - OCMockito (from `https://github.com/stigi/OCMockito.git`, commit `45eb99c`)
+
+EXTERNAL SOURCES:
+  OCMockito:
+    :commit: 45eb99c
+    :git: https://github.com/stigi/OCMockito.git
 
 SPEC CHECKSUMS:
   Expecta: dbc4a27fabb853bdd2e907e33f11ee43a9a47d0c
