@@ -54,7 +54,18 @@
  
  \discussion A path can either be as simple as "/simple" or ccomplex with parameters
  as "/complex/:param/foo/:param2"
+ 
+ \param path The path that a route should be created for
+ \param viewControllerSubclass The view controller class that should be used to instantiate the requested view controller.
+ \param transitionings An array of view controller transitionings (USRouterViewControllerAnimatedTransitioning). The first applicable one is used .
+ */
+- (void)map:(NSString *)path toController:(Class)viewControllerSubclass withTansitionings:(NSArray/*USRouterViewControllerAnimatedTransitioning*/*)transitionings;
+
+/**
+ Creates a mapping between a path and a controller class without any animated transitionings.
+ 
+ \param path The path that a route should be created for
+ \param viewControllerSubclass The view controller class that should be used to instantiate the requested view controller.
  */
 - (void)map:(NSString *)path toController:(Class)viewControllerSubclass;
-
 @end

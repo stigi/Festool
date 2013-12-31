@@ -16,9 +16,15 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+
+#import "XCTestCase+AsyncTesting.h"
+
 #import "USExampleViewControllerOne.h"
 #import "USExampleViewControllerTwo.h"
 #import "USExampleViewControllerThree.h"
+#import "USExampleTransitioning.h"
 
 @interface FestoolTestCase : XCTestCase
 

@@ -13,6 +13,7 @@
 
 @interface FestoolNavigationTests : FestoolTestCase
 @property USRouter *router;
+@property UIWindow *window;
 @end
 
 
@@ -22,7 +23,12 @@
 {
     [super setUp];
     _router = [[USRouter alloc] init];
+    
+    // put the routers navigationController in the view hierarchy
+    _window = [[[UIApplication sharedApplication] delegate] window];
+    self.window.rootViewController = self.router.navigationController;
 }
+
 
 #pragma mark - Meta
 
@@ -132,7 +138,48 @@
     
     expect(self.router.navigationController.viewControllers).to.haveCountOf(1);
     expect(self.router.navigationController.viewControllers[0]).to.beKindOf([USExampleViewControllerOne class]);
+}
+
+
+
+#pragma mark - iOS7 Transitions, yesir
+
+- (void)testMappingsWithTransitions
+{
+    // mock a transitioning
+    id<USRouterViewControllerAnimatedTransitioning> transitioning = mockProtocol(@protocol(USRouterViewControllerAnimatedTransitioning));
+    [given([transitioning us_canHandleAnimatedTransitioningFromViewController:anything()
+                                                                 toController:anything()
+                                                                    operation:UINavigationControllerOperationPush])
+     willReturnBool:YES];
     
+    // set up the routes
+    [self.router map:@"/root" toController:[USExampleViewControllerOne class]];
+    [self.router map:@"/simple" toController:[USExampleViewControllerTwo class] withTansitionings:@[transitioning]];
+
+    [self.router open:@"/root"];
+    
+    // needs to call second -open: after delay, so that the UINavigationController actually performs an animated transition
+    {
+        double delayInSeconds = 0.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
+            [self.router open:@"/simple"];
+        });
+    }
+    
+    // wait 0.2 seconds for the push animation to happen, than verify the mocks
+    {
+        double delayInSeconds = 0.2;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [verifyCount(transitioning, atLeastOnce()) animateTransition:anything()];
+            [self notify:XCTAsyncTestCaseStatusSucceeded];
+        });
+    }
+    
+    // wait 2.0 seconds for the animation to run & the mock verification after 0.2 seconds
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:2.0];
 }
 
 @end

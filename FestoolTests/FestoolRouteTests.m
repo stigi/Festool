@@ -9,6 +9,8 @@
 #import "FestoolTestCase.h"
 
 #import "USRoute.h"
+#import "USRouterViewControllerAnimatedTransitioning.h"
+
 
 @interface FestoolRouteTests : FestoolTestCase
 
@@ -25,6 +27,20 @@
     
     expect(route).toNot.beNil();
     expect(route.parameterPath).to.equal(path);
+    expect(route.animatedTransitionings).to.beNil();
+}
+
+- (void)testInitWithPathAndTransitions
+{
+    NSString *path = @"/users";
+    NSArray *transitions = @[[[USExampleTransitioning alloc] init]];
+    USRoute *route = [[USRoute alloc] initWithParameterPath:path
+                                        viewControllerClass:[UIViewController class]
+                                     animatedTransitionings:transitions];
+    
+    expect(route).toNot.beNil();
+    expect(route.parameterPath).to.equal(path);
+    expect(route.animatedTransitionings).to.equal(transitions);
 }
 
 
