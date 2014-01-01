@@ -4,4 +4,5 @@ A simple navigation router for iOS
 
 ## **Work in progress**
 
-*Don't pay attention to the man behind the curtain*
+*Pay no attention to that man behind the curtain.*
+
